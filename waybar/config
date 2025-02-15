@@ -1,23 +1,27 @@
 {
 	"layer": "top",
+	"height": 10,
+	"spacing": 5,
 	"margin-top": 0,
 	"margin-bottom": 0,
 	"margin-left": 0,
-	"margin-right": 5,
+	"margin-right": 0,
 	"modules-left": ["hyprland/workspaces"],
 	"modules-center": ["clock"],
 	"modules-right": ["bluetooth","custom/brightness"],
 
-	"bluetooth":{
-		"format": "{status}",
-		"format-connected": "",
-		"format-disconnected": "",
-		"format-powered-on": "",
-		"format-powered-off": "",
-		"on-click": "blueman-manager"
+"bluetooth":{
+    		"format": "{status}",
+    		"format-connected": "󰂯", 
+    		"format-disconnected": "",
+    		"format-powered-on": "",
+    		"format-powered-off": "",
+	    	"format-disabled": "󰂲",
+	    	"on-click": "blueman-manager"
+
 	},
 
-	"custom/brightness":{
+"custom/brightness":{
 		"format": "{}",
 		"exec": "~/.config/waybar/scripts/brightness.sh",
 		"interval": 1,
@@ -25,6 +29,24 @@
     		"on-click": "~/.config/waybar/scripts/brightness.sh click",
     		"on-scroll-up": "~/.config/waybar/scripts/brightness.sh scroll-up",
     		"on-scroll-down": "~/.config/waybar/scripts/brightness.sh scroll-down"
-	}
+	},
+
+"hyprland/workspaces": {
+		"format": "{icon}",
+    		"on-click": "hyprctl dispatch workspace {id}",
+    		"format-icons": {
+        	 "1": "",
+        	 "2": "",
+        	 "3": "",
+        	 "4": "",
+        	 "5": "",
+        	 "6": "",
+        	 "7": "",
+        	 "8": "",
+        	 "9": "",
+        	 "10": ""
+    		}
+	},
+
 
 }

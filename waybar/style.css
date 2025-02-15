@@ -1,24 +1,30 @@
 
 *{
-color: white;
-font-family: "FontAwesome";
+	color: white;
+    	font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", sans-serif;
+    	font-size: 12px;
 }
 
-
-
 #waybar {
-	background: black;
+    background: black;
+    min-height: 10px;  /* Try values between 20px and 28px */
+    padding: 0px;       /* Remove extra space */
+    margin: 0px;
+}
+
+#workspaces, #clock, #bluetooth, #custom-brightness {
+    padding: 0px 5px;  /* Reduce space inside elements */
+    font-size: 12px;   /* Reduce text size */
 }
 
 #workspaces {
-	background: transparent;
+	background: gray;
 	border-radius: 20px;
 	font-size: 10px;
 }
 
 #clock {
 	background: transparent;
-	font-size: 17px;
+	font-size: 16px;
 	font-family: monospace;
 }
-
