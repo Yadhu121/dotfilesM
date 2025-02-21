@@ -14,7 +14,7 @@
     		"format": "{status}",
     		"format-connected": "󰂯", 
     		"format-disconnected": "",
-    		"format-powered-on": "",
+    		"format-enabled": "",
     		"format-powered-off": "",
 	    	"format-disabled": "󰂲",
 	    	"on-click": "blueman-manager"
@@ -33,7 +33,6 @@
 
 "hyprland/workspaces": {
 		"format": "{icon}",
-    		"on-click": "hyprctl dispatch workspace {id}",
     		"format-icons": {
         	 "1": "",
         	 "2": "",

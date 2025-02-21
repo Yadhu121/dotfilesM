@@ -7,19 +7,18 @@
 
 #waybar {
     background: black;
-    min-height: 10px;  /* Try values between 20px and 28px */
-    padding: 0px;       /* Remove extra space */
+    padding: 0px;
     margin: 0px;
 }
 
 #workspaces, #clock, #bluetooth, #custom-brightness {
-    padding: 0px 5px;  /* Reduce space inside elements */
-    font-size: 12px;   /* Reduce text size */
+    padding: 0px 5px;
+    font-size: 12px;
 }
 
 #workspaces {
 	background: gray;
-	border-radius: 20px;
+	border-radius: 0px;
 	font-size: 10px;
 }
 
@@ -27,4 +26,21 @@
 	background: transparent;
 	font-size: 16px;
 	font-family: monospace;
+}
+
+#workspaces button {
+    color: black;
+    background: transparent;
+    border: none;
+}
+
+#workspaces button.active {
+    color: #ffcc00; 
+    font-weight: bold;
+    background-color: rgba(255, 255, 0, 0.2);
+    border-radius: 0px;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
