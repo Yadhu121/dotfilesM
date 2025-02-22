@@ -1,13 +1,13 @@
 {
 	"layer": "top",
-	"height": 10,
+	"height": 30,
 	"spacing": 5,
 	"margin-top": 0,
 	"margin-bottom": 0,
 	"margin-left": 0,
 	"margin-right": 0,
 	"modules-left": ["hyprland/workspaces","clock"],
-	"modules-center": [""],
+	"modules-center": ["hyprland/window"],
 	"modules-right": ["bluetooth","custom/brightness"],
 
 	"bluetooth":{
@@ -45,6 +45,11 @@
         	 		"9": "",
         	 		"10": ""
     			}
+	},
+
+	"hyprland/window": {
+			"format": "{}",
+			"max-length": 50
 	},
 
 }

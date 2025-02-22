@@ -6,7 +6,7 @@
 }
 
 #waybar {
-    background: black;
+    background: rgba(0,0,0,0.4);
     padding: 0px;
     margin: 0px;
 }
@@ -19,13 +19,14 @@
 #workspaces {
 	background: transparent;
 	border-radius: 0px;
+	font-family: "JetBrainsMono Nerd Font Bold", "FiraCode Nerd Font Bold", "Font Awesome 6 Free", monospace;
 	font-size: 10px;
 }
 
 #clock {
 	background: transparent;
 	font-size: 16px;
-	font-family: monospace;
+	font-weight: bold;
 }
 
 #workspaces button {
@@ -44,3 +45,12 @@
 #workspaces button:hover {
     background-color: rgba(255,255,255,0.1)
 }
+
+#window, #hyprland-window {
+    font-size: 14px;
+    color: #ffcc00;
+    font-weight: bold;
+    background: transparent;
+    padding: 2px 10px;
+}
+
