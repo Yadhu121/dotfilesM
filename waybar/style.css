@@ -17,7 +17,7 @@
 }
 
 #workspaces {
-	background: gray;
+	background: transparent;
 	border-radius: 0px;
 	font-size: 10px;
 }
@@ -35,12 +35,12 @@
 }
 
 #workspaces button.active {
-    color: #ffcc00; 
+    color: #D3D3D3; 
     font-weight: bold;
     background-color: rgba(255, 255, 0, 0.2);
     border-radius: 0px;
 }
 
 #workspaces button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255,255,255,0.1)
 }
