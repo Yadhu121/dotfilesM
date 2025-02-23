@@ -1,55 +1,82 @@
 {
+
 	"layer": "top",
-	"height": 30,
-	"spacing": 5,
 	"margin-top": 0,
 	"margin-bottom": 0,
 	"margin-left": 0,
 	"margin-right": 0,
 	"modules-left": ["hyprland/workspaces","clock"],
 	"modules-center": ["hyprland/window"],
-	"modules-right": ["bluetooth","custom/brightness"],
+	"modules-right": ["bluetooth","custom/brightness","pulseaudio","network"],
 
-	"bluetooth":{
-    			"format": "{status}",
-    			"format-connected": "󰂯", 
-    			"format-disconnected": "",
-    			"format-enabled": "",
-    			"format-powered-off": "",
-	    		"format-disabled": "󰂲",
-	    		"on-click": "blueman-manager"
-
+	"bluetooth": {
+    		"format": "{icon} {status}",
+    		"format-connected": " {device_alias}",
+    		"format-disconnected": " Off",
+    		"format-icons": {
+        		"enabled": "", 
+        		"disabled": "",
+        		"connected": "",
+        		"connecting": ""
+    		},
+    		"tooltip": true
 	},
 
 	"custom/brightness":{
-			"format": "{}",
-			"exec": "~/.config/waybar/scripts/brightness.sh",
-			"interval": 1,
-    			"tooltip": false,
-    			"on-click": "~/.config/waybar/scripts/brightness.sh click",
-    			"on-scroll-up": "~/.config/waybar/scripts/brightness.sh scroll-up",
-    			"on-scroll-down": "~/.config/waybar/scripts/brightness.sh scroll-down"
+		"format": "{}",
+		"exec": "~/.config/waybar/scripts/brightness.sh",
+		"interval": 1,
+    		"tooltip": false,
+    		"on-click": "~/.config/waybar/scripts/brightness.sh click",
+    		"on-scroll-up": "~/.config/waybar/scripts/brightness.sh scroll-up",
+    		"on-scroll-down": "~/.config/waybar/scripts/brightness.sh scroll-down"
 	},
 
 	"hyprland/workspaces": {
-			"format": "{icon}",
-    			"format-icons": {
-        	 		"1": "",
-        	 		"2": "",
-        	 		"3": "",
-        	 		"4": "",
-        	 		"5": "",
-        	 		"6": "",
-        	 		"7": "",
-        	 		"8": "",
-        	 		"9": "",
-        	 		"10": ""
-    			}
+    		"format": "{icon}",
+    		"on-click": "hyprctl dispatch workspace {id}",
+		"format-icons": {
+        		"1": "",
+        		"2": "",
+        		"3": "",
+        		"4": "",
+        		"5": "",
+        		"6": "",
+        		"7": "",
+        		"8": "",
+        		"9": "",
+        		"10": ""
+    		},		
+		"persistent": true,
+    		"active-only": false,
+		"persistent_workspaces": {
+        		"1": {},
+        		"2": {},
+        		"3": {}
+    		},
 	},
 
 	"hyprland/window": {
-			"format": "{}",
-			"max-length": 50
+	    	"format": "{}",
+    		"max-length": 100,
+		"format-empty": "waht"
 	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+    		"format-muted": "🔇 Muted",
+    		"format-icons": ["", "", ""],
+    		"on-click": "~/.config/waybar/scripts/volume.sh",
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%; [ $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%') -gt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ 100%",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+
+	},
+
+	"network": {
+        	"format-wifi": " {essid} {signalStrength}%",
+        	"format-ethernet": " Connected",
+        	"format-disconnected": " No Network",
+        	"tooltip": true
+    	},
 
 }
