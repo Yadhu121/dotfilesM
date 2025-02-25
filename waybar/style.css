@@ -1,7 +1,7 @@
 
 *{
 	color: white;
-	font-family: "FontAwesome";
+	font-family: "Font Awesome";
 	background : transparent;
 }
 
@@ -14,15 +14,16 @@
 	background: transparent;
 	border-radius: 0px;
 	font-size: 10px;
-	margin-right: 25px;
+	margin-right: 20px;
 }
 
 #clock {
-    background: transparent;
-    font-size: 17px;
-    font-family: monospace;
-    font-weight: 700;
-    color: #D98324;
+    	background: transparent;
+    	font-size: 17px;
+    	font-family: monospace;
+    	font-weight: 700;
+    	color: #E8F9FF;
+	margin-right: 20px;
 }
 
 #workspaces button {
@@ -52,28 +53,38 @@
 }
 
 #pulseaudio {
-	margin-left: 10px;
 	margin-right: 10px;
 	color: #A6CDC6;
 }
 
 #network {
-	margin-right: 10px;
+	margin-right: 1px;
 	color: #C14600;
 }
 
 window#waybar {
 	color: #B5CFB7;
-    background: rgba(0, 0, 0, 0);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0px;
-    padding: 5px;
+    	background: rgba(0, 0, 0, 0);
+    	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    	border-radius: 0px;
+    	padding: 5px;
 }
 
 #custom-brightness {
 	color: #A1D6B2;
+	margin-right: 10px;
 }
 
 window {
 	color: #B5CFB7;
+}
+
+#custom-spotify {
+	margin-right: 10px;
+	color: #1ED760;
+}
+
+#custom-firefox {
+	margin-right: 20px;
+	color: #FF7139; 
 }

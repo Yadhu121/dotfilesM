@@ -5,14 +5,15 @@
 	"margin-bottom": 0,
 	"margin-left": 0,
 	"margin-right": 0,
-	"modules-left": ["hyprland/workspaces","clock"],
+	"modules-left": ["hyprland/workspaces","custom/spotify","custom/firefox"],
 	"modules-center": ["hyprland/window"],
-	"modules-right": ["bluetooth","custom/brightness","pulseaudio","network"],
+	"modules-right": ["clock","bluetooth","custom/brightness","pulseaudio","network"],
 
 	"bluetooth": {
     		"format": "{icon} {status}",
     		"format-connected": " {device_alias}",
     		"format-disconnected": " Off",
+		"on-click": "~/.config/waybar/scripts/bluetooth.sh",
     		"format-icons": {
         		"enabled": "", 
         		"disabled": "",
@@ -78,5 +79,17 @@
         	"format-disconnected": " No Network",
         	"tooltip": true
     	},
+
+	"custom/spotify": {
+    		"format": "",
+    		"tooltip": "Spotify",
+    		"on-click": "spotify"
+	},
+
+	"custom/firefox": {
+    		"format": "",
+    		"tooltip": "Firefox",
+    		"on-click": "firefox"
+	}
 
 }
