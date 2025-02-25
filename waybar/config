@@ -90,6 +90,12 @@
     		"format": "",
     		"tooltip": "Firefox",
     		"on-click": "firefox"
-	}
+	},
+	
+	"custom/reddit": {
+		"format": "",
+		"tooltip": "Reddit",
+		"on-click": "reddit"
+	},
 
 }

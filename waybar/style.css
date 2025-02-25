@@ -85,6 +85,10 @@ window {
 }
 
 #custom-firefox {
-	margin-right: 20px;
+	margin-right: 10px;
 	color: #FF7139; 
+}
+
+#custom-reddit {
+	color: #FF4500;
 }
