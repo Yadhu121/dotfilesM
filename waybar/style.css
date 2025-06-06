@@ -10,12 +10,13 @@
 	border-radius: 0px;
 }
 
-#workspaces {
+/*#workspaces {
+	color: red;
 	background: transparent;
 	border-radius: 0px;
 	font-size: 10px;
 	margin-right: 20px;
-}
+}*/
 
 #clock {
     	background: transparent;
@@ -26,8 +27,8 @@
 	margin-right: 20px;
 }
 
-#workspaces button {
-	color: #d3d3d3;
+/*#workspaces button {
+	color: red;
 	background: transparent;
 	border: none;
 }
@@ -37,7 +38,35 @@
 	background: transparent;
 	border-radius: 0px;
 	padding: 5px;
+}*/
+/*
+#workspaces button:hover {
+    color: blue;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: red;
+    border: red;
 }
+
+#workspaces button {
+    padding: 0px;
+    color: red;
+    margin: 2px;
+    transition: color 200ms ease-in-out;
+}
+
+#workspaces button.selected {
+    color: blue;
+}
+
+#workspaces button.active {
+    color: blue;
+}
+
+#workspaces button.urgent {
+    color: red;
+}
+*/
 
 #window, #hyprland-window {
 	color: #B5CFB7;
@@ -49,7 +78,7 @@
 
 #bluetooth {
 	margin-right: 10px;
-	color: yellow;	
+	color: #0082FC;	
 }
 
 #pulseaudio {

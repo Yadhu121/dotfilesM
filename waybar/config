@@ -11,16 +11,16 @@
 
 	"bluetooth": {
     		"format": "{icon}",
-    		"format-connected": " {device_alias}",
-    		"format-disconnected": " Off",
-    		"on-click": "rofi-bluetooth -theme @theme /usr/share/rofi/themes/arthur.rasi",
+    		"format-connected": " ",
+    		"format-disconnected": "?",
+    		"on-click": "~/.config/wofi/bluetooth-menu.sh",
 		"format-icons": {
         		"enabled": "", 
-        		"disabled": "",
-        		"connected": "",
-        		"connecting": ""
+        		"disabled": "",
+        		"connected": "",
+        		"connecting": "?"
     		},
-    		"tooltip": true
+    		"tooltip": false
 	},
 
 
@@ -28,8 +28,8 @@
     		"format": "{icon}",
     		"on-click": "hyprctl dispatch workspace {id}",
 		"format-icons": {
-        		"1": "",
-        		"2": "",
+        		"1": "1",
+        		"2": "",
         		"3": "",
         		"4": "",
         		"5": "",
@@ -66,9 +66,9 @@
 
 	"network": {
         	"format-wifi": " {essid} {signalStrength}%",
-        	"format-ethernet": " Connected",
-        	"format-disconnected": " No Network",
-        	"tooltip": true
+        	"format-ethernet": "",
+        	"format-disconnected": "",
+        	"tooltip": false
     	},
 
 	"custom/spotify": {
