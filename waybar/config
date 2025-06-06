@@ -7,18 +7,18 @@
 	"margin-right": 0,
 	"modules-left": ["hyprland/workspaces","custom/spotify","custom/firefox"],
 	"modules-center": ["hyprland/window"],
-	"modules-right": ["clock","bluetooth","custom/brightness","pulseaudio","network"],
+	"modules-right": ["clock","bluetooth","custom/brightness","pulseaudio","network","custom/powermenu"],
 
 	"bluetooth": {
-    		"format": "{icon} {status}",
+    		"format": "{icon}",
     		"format-connected": " {device_alias}",
     		"format-disconnected": " Off",
-		"on-click": "~/.config/waybar/scripts/bluetooth.sh",
-    		"format-icons": {
-        		"enabled": "", 
+    		"on-click": "rofi-bluetooth -theme @theme /usr/share/rofi/themes/arthur.rasi",
+		"format-icons": {
+        		"enabled": "", 
         		"disabled": "",
         		"connected": "",
-        		"connecting": ""
+        		"connecting": ""
     		},
     		"tooltip": true
 	},
@@ -59,8 +59,8 @@
     		"format-muted": "🔇 Muted",
     		"format-icons": ["", "", ""],
     		"on-click": "~/.config/waybar/scripts/volume.sh",
-		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%; [ $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%') -gt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ 100%",
-		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%; [ $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $1}' | tr -d '%') -gt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ 100%",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%"
 
 	},
 
@@ -88,5 +88,12 @@
 		"tooltip": "Reddit",
 		"on-click": "reddit"
 	},
+
+	"custom/powermenu": {
+    		"format": "⏻",
+    		"tooltip": "Power Menu",
+    		"on-click": "~/.config/wofi/power-menu.sh"
+	},
+
 
 }
