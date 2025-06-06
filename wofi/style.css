@@ -1,20 +1,22 @@
 window {
-    background-color: rgba(20, 20, 20, 0.95);
-    border-radius: 10px;
-    border: 2px solid #D98324;
+  border: 0px transparent;
+  background-color: transparent;
+  border-radius: 10px;
 }
 
 #entry {
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    font-size: 14px;
-    background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #FFD6A5;
 }
 
 #entry:selected {
-    background-color: #D98324;
-    color: black;
-    font-weight: bold;
+  background-color: #F9FAFBFF;
+  color: #E0F7FA;
 }
 
+#input{
+        display: none;
+        margin: -1000px 5px;
+}
