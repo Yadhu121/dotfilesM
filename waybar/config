@@ -90,7 +90,7 @@
 	},
 
 	"custom/powermenu": {
-    		"format": "⏻",
+    		"format": "",
     		"tooltip": "Power Menu",
     		"on-click": "~/.config/wofi/power-menu.sh"
 	},

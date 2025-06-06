@@ -58,7 +58,7 @@
 }
 
 #network {
-	margin-right: 7px;
+	margin-right: 10px;
 	color: #C14600;
 }
 
@@ -86,4 +86,8 @@ window {
 
 #custom-reddit {
 	color: #FF4500;
+}
+
+#custom-powermenu {
+	margin-right: 7px;
 }
